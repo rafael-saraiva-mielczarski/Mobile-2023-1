@@ -19,14 +19,11 @@ public class Activity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_2);
         loginBtn = findViewById(R.id.loginBtn);
-        loginBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {onHandleAuth();}
-        });
+        loginBtn.setOnClickListener(v -> onHandleAuth());
     }
     public void onHandleAuth() {
         editName = findViewById(R.id.TextPersonName);
-        editPassword = findViewById(R.id.TextPassword);
+        editPassword = findViewById(R.id.editTextPassword);
         name = editName.getText().toString();
         password = editPassword.getText().toString();
         Intent intent;

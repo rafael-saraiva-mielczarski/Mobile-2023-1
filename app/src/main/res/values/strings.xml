@@ -6,7 +6,7 @@
     <string name="btn_login">Login</string>
     <string name="name_input">Nome</string>
     <string name="password_input">Senha</string>
-    <string name="text_loggedin">Parabéns, agora você está dentro do nosso sistema</string>
+    <string name="text_loggedin">Parabéns! Agora você está dentro do nosso sistema</string>
     <string name="btn_logout">Logout</string>
 
 
