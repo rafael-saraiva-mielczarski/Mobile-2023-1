@@ -11,17 +11,13 @@ import android.widget.EditText;
 public class Activity2 extends AppCompatActivity {
 
     Button loginBtn;
-    EditText inputName, inputPassword;
+    EditText editName, editPassword;
     String name, password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_2);
-        inputName = findViewById(R.id.TextPersonName);
-        inputPassword = findViewById(R.id.TextPassword);
-        name = inputName.getText().toString();
-        password = inputPassword.getText().toString();
         loginBtn = findViewById(R.id.loginBtn);
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -29,6 +25,10 @@ public class Activity2 extends AppCompatActivity {
         });
     }
     public void onHandleAuth() {
+        editName = findViewById(R.id.TextPersonName);
+        editPassword = findViewById(R.id.TextPassword);
+        name = editName.getText().toString();
+        password = editPassword.getText().toString();
         Intent intent;
         if(name.equals("admin") && password.equals("123456")){
             intent = new Intent(this, Activity3.class);
