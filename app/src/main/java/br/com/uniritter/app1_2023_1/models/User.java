@@ -1,10 +1,13 @@
 package br.com.uniritter.app1_2023_1.models;
 
+import androidx.annotation.NonNull;
 public class User {
     private int id;
     private String name;
     private String userName;
     private String email;
+
+    private Address address;
 
     public User(int id, String name, String userName, String email) {
         this.id = id;
@@ -13,12 +16,16 @@ public class User {
         this.email = email;
     }
 
-    public int getId() {
-        return id;
+    public User(int id, String name, String userName, String email, Address address) {
+        this.id = id;
+        this.name = name;
+        this.userName = userName;
+        this.email = email;
+        this.address = address;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public int getId() {
+        return id;
     }
 
     public String getName() {
@@ -45,4 +52,17 @@ public class User {
         this.email = email;
     }
 
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
+    @NonNull
+    @Override
+    public String toString() {
+        return "Nome:"+name+"; id: "+id;
+    }
 }
