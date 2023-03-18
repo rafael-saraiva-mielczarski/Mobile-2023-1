@@ -8,8 +8,10 @@
     <string name="password_input">Senha</string>
     <string name="text_loggedin">Parabéns! Agora você está dentro do nosso sistema</string>
     <string name="btn_logout">Logout</string>
+    <string name="btn_request">Teste Json</string>
+    <string name="btn_search_names">Buscar Nomes</string>
+    <string name="btn_search_posts">Buscar Posts</string>
+    <string name="btn_search_comments">Buscar Comments</string>
+    <string name="btn_search_todos">Buscar ToDos</string>
 
-
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 </resources>
