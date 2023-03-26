@@ -37,14 +37,13 @@
         android:id="@+id/btn_buscaNomes"
         android:layout_width="173dp"
         android:layout_height="53dp"
-        android:layout_marginTop="616dp"
         android:text="@string/btn_search_names"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.932"
+        app:layout_constraintHorizontal_bias="0.915"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.274" />
+        app:layout_constraintVertical_bias="0.932" />
 
     <Button
         android:id="@+id/btn_buscaPosts"

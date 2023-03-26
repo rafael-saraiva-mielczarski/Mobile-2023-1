@@ -1,5 +1,7 @@
 package br.com.uniritter.app1_2023_1.models;
 
+import androidx.annotation.NonNull;
+
 public class Comments {
 
     private int postId;
@@ -56,4 +58,9 @@ public class Comments {
         this.body = body;
     }
 
+    @NonNull
+    @Override
+    public String toString() {
+        return "Titulo:"+name+"; id: "+id;
+    }
 }

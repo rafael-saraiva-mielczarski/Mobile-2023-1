@@ -21,7 +21,11 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
+import br.com.uniritter.app1_2023_1.Repositories.CommentRepository;
+import br.com.uniritter.app1_2023_1.Repositories.PostRepository;
 import br.com.uniritter.app1_2023_1.Repositories.UserRepository;
+import br.com.uniritter.app1_2023_1.Services.CommentService;
+import br.com.uniritter.app1_2023_1.Services.PostsService;
 import br.com.uniritter.app1_2023_1.Services.UserService;
 import br.com.uniritter.app1_2023_1.models.User;
 
@@ -72,10 +76,36 @@ public class Activity4 extends AppCompatActivity  {
         btn.setOnClickListener(view->{
             getAllUsers();
         });
+        Button btn_posts = findViewById(R.id.btn_buscaPosts);
+        btn_posts.setOnClickListener(view -> {
+            getAllPosts();
+        });
+        Button btn_comments = findViewById(R.id.btn_buscaComments);
+        btn_comments.setOnClickListener(view -> {
+            getAllComments();
+        });
     }
     private void getAllUsers() {
         System.out.println("antes->"+UserRepository.getInstance().getUsers());
 
         UserService.getAllUsers(this, ()->System.out.println("depois->"+ UserRepository.getInstance().getUsers()));
+    }
+
+    private void getAllPosts() {
+        System.out.println("antes->"+ PostRepository.getInstance().getPosts());
+
+        PostsService.getAllPosts(this, ()->System.out.println("depois->"+ PostRepository.getInstance().getPosts()));
+    }
+
+//    private void getAllToDos() {
+//        System.out.println("antes->"+ PostRepository.getInstance().getPosts());
+//
+//        PostsService.getAllPosts(this, ()->System.out.println("depois->"+ PostRepository.getInstance().getPosts()));
+//    }
+//
+    private void getAllComments() {
+        System.out.println("antes->"+ CommentRepository.getInstance().getComments());
+
+        CommentService.getAllComments(this, ()->System.out.println("depois->"+ CommentRepository.getInstance().getComments()));
     }
 }

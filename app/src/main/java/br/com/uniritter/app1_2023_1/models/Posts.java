@@ -1,5 +1,7 @@
 package br.com.uniritter.app1_2023_1.models;
 
+import androidx.annotation.NonNull;
+
 public class Posts {
     private int userId;
     private int id;
@@ -43,5 +45,11 @@ public class Posts {
 
     public void setBody(String body) {
         this.body = body;
+    }
+
+    @NonNull
+    @Override
+    public String toString() {
+        return "Titulo:"+title+"; id: "+id;
     }
 }
