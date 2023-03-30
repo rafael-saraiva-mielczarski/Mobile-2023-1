@@ -55,4 +55,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.946" />
+
+    <Button
+        android:id="@+id/btn_view_https"
+        android:layout_width="233dp"
+        android:layout_height="55dp"
+        android:text="@string/btn_view_https"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.075" />
 </androidx.constraintlayout.widget.ConstraintLayout>

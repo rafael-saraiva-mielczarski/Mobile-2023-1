@@ -1,5 +1,7 @@
 package br.com.uniritter.app1_2023_1.models;
 
+import androidx.annotation.NonNull;
+
 public class Todo {
 
     private int userId;
@@ -44,5 +46,11 @@ public class Todo {
 
     public void setCompleted(String completed) {
         this.completed = completed;
+    }
+
+    @NonNull
+    @Override
+    public String toString() {
+        return "Titulo:"+title+"; id: "+id;
     }
 }

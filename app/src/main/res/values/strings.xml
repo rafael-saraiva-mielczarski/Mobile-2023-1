@@ -13,5 +13,9 @@
     <string name="btn_search_posts">Buscar Posts</string>
     <string name="btn_search_comments">Buscar Comments</string>
     <string name="btn_search_todos">Buscar ToDos</string>
+    <string name="btn_view_https">Visualizar os Requests</string>
+    <string name="user">Usuário</string>
+    <string name="name">Nome</string>
+    <string name="email">E-Mail</string>
 
 </resources>

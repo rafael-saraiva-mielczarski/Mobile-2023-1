@@ -28,6 +28,10 @@ public class User {
         return id;
     }
 
+    public CharSequence getNameCS() {
+        return name;
+    }
+
     public String getName() {
         return name;
     }

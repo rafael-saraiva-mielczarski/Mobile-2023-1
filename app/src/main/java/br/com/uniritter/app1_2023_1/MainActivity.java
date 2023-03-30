@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         Button btn1_2 = findViewById(R.id.button1_2);
         Button btn_request = findViewById(R.id.btn_requests);
+        Button btn_view_request = findViewById(R.id.btn_view_https);
         btn1_2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -29,6 +30,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), Activity4.class);
+                startActivity(intent);
+            }
+        });
+
+        btn_view_request.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Activity5.class);
                 startActivity(intent);
             }
         });
