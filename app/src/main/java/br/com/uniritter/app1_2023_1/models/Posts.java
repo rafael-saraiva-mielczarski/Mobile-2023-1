@@ -3,24 +3,16 @@ package br.com.uniritter.app1_2023_1.models;
 import androidx.annotation.NonNull;
 
 public class Posts {
-    private int userId;
     private int id;
     private String title;
     private String body;
+    private User user;
 
-    public Posts(int userId, int id, String title, String body) {
-        this.userId = userId;
+    public Posts(int id, String title, String body, User user) {
         this.id = id;
         this.title = title;
         this.body = body;
-    }
-
-    public int getUserId() {
-        return userId;
-    }
-
-    public void setUserId(int userId) {
-        this.userId = userId;
+        this.user = user;
     }
 
     public int getId() {
@@ -47,9 +39,18 @@ public class Posts {
         this.body = body;
     }
 
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+
     @NonNull
     @Override
     public String toString() {
-        return "Titulo:"+title+"; id: "+id;
+        return this.id+" -> "+this.title+" user: "+this.user.getName();
     }
 }

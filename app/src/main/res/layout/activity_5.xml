@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity5">
+    tools:context=".Views.Activity5">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/usersRV"
@@ -18,22 +18,10 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
-        android:id="@+id/btn_TodosUsers"
-        android:layout_width="136dp"
-        android:layout_height="49dp"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="@+id/usersRV"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.763"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.061" />
-
-    <Button
-        android:id="@+id/button3"
+        android:id="@+id/btn_busca_users"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="troca"
+        android:text="@string/btn_search_users"
 
         app:layout_constraintBottom_toBottomOf="@+id/usersRV"
         app:layout_constraintEnd_toEndOf="parent"

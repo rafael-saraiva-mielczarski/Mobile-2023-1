@@ -1,4 +1,4 @@
-package br.com.uniritter.app1_2023_1;
+package br.com.uniritter.app1_2023_1.Views;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -21,6 +21,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
+import br.com.uniritter.app1_2023_1.R;
 import br.com.uniritter.app1_2023_1.Repositories.CommentRepository;
 import br.com.uniritter.app1_2023_1.Repositories.PostRepository;
 import br.com.uniritter.app1_2023_1.Repositories.ToDoRepository;

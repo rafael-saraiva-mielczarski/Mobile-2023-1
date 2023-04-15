@@ -55,4 +55,8 @@ public class PostRepository {
     public Collection<Posts> getPosts() {
         return this.postsMap.values();
     }
+
+    public Posts getPost(int id) {
+        return this.postsMap.get(id);
+    }
 }

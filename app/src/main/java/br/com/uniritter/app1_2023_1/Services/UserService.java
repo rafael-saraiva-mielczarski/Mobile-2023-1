@@ -5,7 +5,9 @@ import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
+import com.android.volley.Response;
 import com.android.volley.toolbox.JsonArrayRequest;
+import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 
 import org.json.JSONException;
@@ -18,6 +20,7 @@ import br.com.uniritter.app1_2023_1.Repositories.UserRepository;
 public class UserService {
     //cria objeto User apartir de um JSON
     public static User userFromJson(JSONObject json) {
+
         User user = null;
         try {
             user = new User(
@@ -37,9 +40,6 @@ public class UserService {
             System.out.println("erro no Json. Fogo no parquinho "+e.getMessage());
         }
         return user;
-    }
-
-    public static void getUser(Context contexto, int id, ServiceDone callback) {
     }
 
     //buscar todos os users no servidor REST
@@ -69,5 +69,22 @@ public class UserService {
         queue.add(request);
         System.out.println("depois de ir para a queue");
     }
+
+    public static void getUser(Context contexto, int id, ServiceDone callback) {
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET,
+                "https://jsonplaceholder.typicode.com/users/"+id, null,
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        User user = null;
+                        user = userFromJson( response);
+                    }
+                },error->{
+            Toast.makeText(contexto, "Ocorreu uma falha na requisição "+error.getMessage(), Toast.LENGTH_LONG).show();
+        });
+        RequestQueue queue = Volley.newRequestQueue(contexto);
+        queue.add(request);
+    }
+
 
 }
