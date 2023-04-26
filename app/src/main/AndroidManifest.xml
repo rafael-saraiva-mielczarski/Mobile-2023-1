@@ -14,6 +14,9 @@
         android:theme="@style/Theme.App1_2023_1"
         tools:targetApi="31">
         <activity
+            android:name=".Views.UserDetailsActivity"
+            android:exported="false" />
+        <activity
             android:name=".Views.Activity5"
             android:exported="false" />
         <activity

@@ -10,20 +10,14 @@ import android.widget.Button;
 import br.com.uniritter.app1_2023_1.R;
 
 public class Activity3 extends AppCompatActivity {
-    private Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_3);
 
-        button = findViewById(R.id.button4);
-        button.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                openMainActivity();
-            }
-        });
+        Button button = findViewById(R.id.button4);
+        button.setOnClickListener(v -> openMainActivity());
     }
 
     public void openMainActivity() {

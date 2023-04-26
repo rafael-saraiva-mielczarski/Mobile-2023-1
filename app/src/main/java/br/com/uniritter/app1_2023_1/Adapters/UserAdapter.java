@@ -1,5 +1,7 @@
 package br.com.uniritter.app1_2023_1.Adapters;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,11 +14,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 import br.com.uniritter.app1_2023_1.R;
+import br.com.uniritter.app1_2023_1.Views.UserDetailsActivity;
 import br.com.uniritter.app1_2023_1.models.User;
 
 public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder>{
     private List<User> usersList;
-    private int tipoLayout;
     public UserAdapter(List<User> usersList) {
         this.usersList = usersList;
     }
@@ -27,8 +29,12 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder>{
         // Create a new view, which defines the UI of the list item
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.view_holder_user, parent, false);
+
+
         view.findViewById(R.id.button4).setOnClickListener((v)->{
-            Toast.makeText(view.getContext(), ((User)view.getTag()).getName(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(view.getContext(), "User Id: "+((User)view.getTag()).getId(), Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(view.getContext(), UserDetailsActivity.class);
+            view.getContext().startActivity(intent);
         });
         return new ViewHolder(view);
     }
