@@ -19,5 +19,10 @@
     <string name="email">E-Mail</string>
     <string name="btn_search_users">Buscar Usuários</string>
     <string name="btn_user_details">Detalhes</string>
+    <string name="userTv">Usuário: </string>
+    <string name="nameTv">Nome: </string>
+    <string name="emailTv">Email: </string>
+    <string name="idTv">Id: </string>
+    <string name="addressTv">Localização: </string>
 
 </resources>

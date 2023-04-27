@@ -6,13 +6,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public interface UserPresenterContract {
     interface View {
-        public void setUsersAdapter(RecyclerView.Adapter adapter);
-        public Context getContexto();
+        void setUsersAdapter(RecyclerView.Adapter adapter);
+        Context getContexto();
 
     }
     interface Presenter {
 
-        public void getAllUsers();
+        void getAllUsers();
 
     }
 }

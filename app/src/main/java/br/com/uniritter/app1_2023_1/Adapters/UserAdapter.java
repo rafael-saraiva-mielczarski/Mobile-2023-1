@@ -25,15 +25,20 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder>{
 
     @NonNull
     @Override
-    public UserAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         // Create a new view, which defines the UI of the list item
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.view_holder_user, parent, false);
 
 
         view.findViewById(R.id.button4).setOnClickListener((v)->{
-            Toast.makeText(view.getContext(), "User Id: "+((User)view.getTag()).getId(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(view.getContext(), "Mostrando os detalhes de: "+((User)view.getTag()).getName(), Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(view.getContext(), UserDetailsActivity.class);
+            intent.putExtra("Name",((User) view.getTag()).getName());
+            intent.putExtra("Username",((User) view.getTag()).getUserName());
+            intent.putExtra("Email",((User) view.getTag()).getEmail());
+            intent.putExtra("Id",((User) view.getTag()).getId());
+            intent.putExtra("Address",((User) view.getTag()).getAddress().getCity());
             view.getContext().startActivity(intent);
         });
         return new ViewHolder(view);

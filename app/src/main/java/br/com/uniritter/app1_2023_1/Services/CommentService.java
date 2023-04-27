@@ -51,9 +51,7 @@ public class CommentService {
                         callback.onServiceDone();
                     }
                 },
-                error->{
-                    Toast.makeText(contexto, "Ocorreu uma falha na requisição "+error.getMessage(), Toast.LENGTH_LONG).show();
-                });
+                error-> Toast.makeText(contexto, "Ocorreu uma falha na requisição "+error.getMessage(), Toast.LENGTH_LONG).show());
         RequestQueue queue = Volley.newRequestQueue(contexto);
         System.out.println("antes de ir para a queue");
         queue.add(request);

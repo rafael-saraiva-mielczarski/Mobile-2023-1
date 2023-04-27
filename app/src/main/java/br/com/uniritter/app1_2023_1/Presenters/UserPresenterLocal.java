@@ -1,7 +1,5 @@
 package br.com.uniritter.app1_2023_1.Presenters;
 
-import android.util.Log;
-
 import java.util.ArrayList;
 
 import br.com.uniritter.app1_2023_1.Adapters.UserAdapter;
@@ -18,7 +16,7 @@ public class UserPresenterLocal implements UserPresenterContract.Presenter{
     @Override
     public void getAllUsers() {
         System.out.println("antes->"+ UserRepository.getInstance().getUsers());
-        ArrayList<User> users = new ArrayList<User>();
+        ArrayList<User> users = new ArrayList<>();
         User a = new User(1, "Gabriela","gabi", "g@g.com.br");
         users.add(a);
         User b = new User(2, "Bruno","bruno", "b@b.com.br");

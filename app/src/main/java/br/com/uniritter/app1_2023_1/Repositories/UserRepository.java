@@ -1,9 +1,7 @@
 package br.com.uniritter.app1_2023_1.Repositories;
 
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import br.com.uniritter.app1_2023_1.models.User;

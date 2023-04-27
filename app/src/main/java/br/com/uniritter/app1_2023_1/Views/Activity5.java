@@ -1,7 +1,9 @@
 package br.com.uniritter.app1_2023_1.Views;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -17,6 +19,7 @@ public class Activity5 extends AppCompatActivity implements UserPresenterContrac
     private RecyclerView rv;
     LinearLayoutManager llm;
     LinearLayoutManager llmh;
+    Button buttonBack;
     private UserPresenterContract.Presenter presenter;
 
 
@@ -30,6 +33,12 @@ public class Activity5 extends AppCompatActivity implements UserPresenterContrac
 
         rv = findViewById(R.id.usersRV);
         rv.setLayoutManager(llm);
+
+        buttonBack = findViewById(R.id.back);
+        buttonBack.setOnClickListener(v -> {
+            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+            startActivity(intent);
+        });
 
         findViewById(R.id.btn_busca_users).setOnClickListener((v) -> {
             if (presenter instanceof UserPresenter) {

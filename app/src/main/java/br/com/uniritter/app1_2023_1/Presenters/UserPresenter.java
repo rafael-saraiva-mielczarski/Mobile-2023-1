@@ -25,10 +25,7 @@ public class UserPresenter implements UserPresenterContract.Presenter{
             UserAdapter adapter = new UserAdapter(new ArrayList(UserRepository.getInstance().getUsers()));
             view.setUsersAdapter(adapter);
 
-            PostsService.getAllPosts(view.getContexto(), ()->{
-                Log.d("getAllPosts", PostRepository.getInstance().getPost(1).toString() );
-                ;
-            });
+            PostsService.getAllPosts(view.getContexto(), ()-> Log.d("getAllPosts", PostRepository.getInstance().getPost(1).toString() ));
         });
     }
 }

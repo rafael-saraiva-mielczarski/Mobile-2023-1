@@ -11,9 +11,8 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import br.com.uniritter.app1_2023_1.models.Address;
-import br.com.uniritter.app1_2023_1.models.Todo;
 import br.com.uniritter.app1_2023_1.Repositories.ToDoRepository;
+import br.com.uniritter.app1_2023_1.models.Todo;
 
 public class ToDoService {
     //cria objeto todos apartir de um JSON
@@ -51,9 +50,7 @@ public class ToDoService {
                         callback.onServiceDone();
                     }
                 },
-                error->{
-                    Toast.makeText(contexto, "Ocorreu uma falha na requisição "+error.getMessage(), Toast.LENGTH_LONG).show();
-                });
+                error-> Toast.makeText(contexto, "Ocorreu uma falha na requisição "+error.getMessage(), Toast.LENGTH_LONG).show());
         RequestQueue queue = Volley.newRequestQueue(contexto);
         System.out.println("antes de ir para a queue");
         queue.add(request);

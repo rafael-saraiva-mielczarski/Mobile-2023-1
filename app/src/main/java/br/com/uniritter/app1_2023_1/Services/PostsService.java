@@ -55,9 +55,7 @@ public class PostsService {
                         callback.onServiceDone();
                     }
                 },
-                error->{
-                    Toast.makeText(contexto, "Ocorreu uma falha na requisição "+error.getMessage(), Toast.LENGTH_LONG).show();
-                });
+                error-> Toast.makeText(contexto, "Ocorreu uma falha na requisição "+error.getMessage(), Toast.LENGTH_LONG).show());
         RequestQueue queue = Volley.newRequestQueue(contexto);
         queue.add(request);
     }
@@ -72,9 +70,7 @@ public class PostsService {
                         Posts post = null;
                         post = postFromJson( response);
                     }
-                },error->{
-            Toast.makeText(contexto, "Ocorreu uma falha na requisição "+error.getMessage(), Toast.LENGTH_LONG).show();
-        });
+                },error-> Toast.makeText(contexto, "Ocorreu uma falha na requisição "+error.getMessage(), Toast.LENGTH_LONG).show());
         RequestQueue queue = Volley.newRequestQueue(contexto);
         queue.add(request);
     }
